@@ -1,0 +1,16 @@
+.card {
+  max-width: 200px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.header-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Yellow_Labrador_Retriever_2.jpg/640px-Yellow_Labrador_Retriever_2.jpg");
+  background-size: cover;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 0;
+}

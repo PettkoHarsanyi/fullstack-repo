@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Take for a walk</h1>
+
+<form mat-dialog-content [formGroup]="walkForm" (ngSubmit)="submit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Duration</mat-label>
+    <input
+      formControlName="duration"
+      name="duration"
+      matInput
+      type="number"
+      placeholder="10">
+    <mat-error *ngIf="getDuration.invalid">This field is required.</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Day</mat-label>
+    <input
+      formControlName="from"
+      name="from"
+      type="date"
+      matInput
+      >
+    <mat-error *ngIf="getFrom.invalid">This field is required.</mat-error>
+
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Time</mat-label>
+    <input
+      formControlName="time"
+      name="time"
+      type="time"
+      matInput
+      >
+    <mat-error *ngIf="getTime.invalid">This field is required.</mat-error>
+
+  </mat-form-field>
+
+  <div class="mat-dialog-actions">
+    <button mat-raised-button color="primary">Save</button>
+  </div>
+</form>

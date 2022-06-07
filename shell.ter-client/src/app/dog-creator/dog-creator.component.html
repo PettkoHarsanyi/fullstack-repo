@@ -1,0 +1,60 @@
+<h1 mat-dialog-title>Edit Dog</h1>
+
+<form mat-dialog-content [formGroup]="dogForm" (ngSubmit)="submit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input
+      formControlName="name"
+      name="name"
+      matInput
+      placeholder="Szofi">
+    <mat-error *ngIf="name.invalid">This field is required.</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Breed</mat-label>
+    <input
+      formControlName="type"
+      name="type"
+      matInput
+      placeholder="Labrador">
+    <mat-error *ngIf="type.invalid">This field is required.</mat-error>
+
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Age</mat-label>
+    <input
+      formControlName="age"
+      type="number"
+      name="age"
+      matInput
+      placeholder="10">
+    <mat-error *ngIf="age.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Weight</mat-label>
+    <input
+      formControlName="weight"
+      type="number"
+      name="weight"
+      matInput
+      placeholder="10">
+    <mat-error *ngIf="weight.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Strength</mat-label>
+    <input
+      formControlName="strength"
+      type="number"
+      name="strength"
+      matInput
+      placeholder="10">
+    <mat-error *ngIf="strength.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <div class="mat-dialog-actions">
+    <button mat-raised-button color="primary">Save</button>
+  </div>
+</form>

@@ -1,0 +1,15 @@
+<h1>Dogs</h1>
+
+<ng-container *ngIf="dogs">
+  <mat-card *ngFor="let dog of dogs;" class="card">
+      <app-dog-summary
+      [dog]="dog"
+      (onEditDog) = "onEditDog($event)"
+      >
+      </app-dog-summary>
+  </mat-card>
+</ng-container>
+
+<div class="button-container">
+  <button *ngIf="canAdd()" mat-raised-button (click)="onCreateDog()">Add Dog</button>
+</div>

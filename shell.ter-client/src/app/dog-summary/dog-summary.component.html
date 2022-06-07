@@ -1,0 +1,17 @@
+<mat-card-header>
+  <div mat-card-avatar class="header-image"></div>
+  <mat-card-title id="dogName">{{ dog.name }}</mat-card-title>
+  <mat-card-subtitle>{{ dog.type }}</mat-card-subtitle>
+</mat-card-header>
+<img mat-card-image
+  [src]="dogImageURL"
+  alt="Photo of {{dog.name}}">
+<mat-card-content>
+  <p>
+  </p>
+</mat-card-content>
+<mat-card-actions>
+  <a mat-button [routerLink]="['/','dogs',dog.id]">Details</a>
+  <a mat-button id="editDog" *ngIf="showButtons" (click)="onEditDog.emit(dog)">Edit</a>
+  <button *ngIf="userService.canWalk" (click)="onAddWalk()" mat-button >Walk</button>
+</mat-card-actions>

@@ -1,0 +1,70 @@
+<h1 mat-dialog-title>Take for a walk</h1>
+
+<form mat-dialog-content [formGroup]="userForm" (ngSubmit)="submit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input
+      formControlName="userName"
+      name="userName"
+      matInput
+      placeholder="10">
+    <mat-error *ngIf="getUserName.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input
+      formControlName="name"
+      name="name"
+      matInput>
+    <mat-error *ngIf="getName.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input
+      formControlName="password"
+      name="password"
+      matInput
+      type="password"
+      >
+    <mat-error *ngIf="getPassword.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Age</mat-label>
+    <input
+      formControlName="age"
+      name="age"
+      matInput
+      type="number"
+      placeholder="10">
+    <mat-error *ngIf="getAge.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Strength</mat-label>
+    <input
+      formControlName="strength"
+      name="strength"
+      matInput
+      type="number"
+      placeholder="10">
+    <mat-error *ngIf="getStrength.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Role</mat-label>
+    <input
+      formControlName="role"
+      name="role"
+      matInput
+      type="number"
+      placeholder="1">
+    <mat-error *ngIf="getRole.invalid">This field is required.</mat-error>
+  </mat-form-field>
+
+  <div class="mat-dialog-actions">
+    <button mat-raised-button color="primary">Save</button>
+  </div>
+</form>

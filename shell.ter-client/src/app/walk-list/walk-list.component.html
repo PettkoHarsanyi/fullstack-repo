@@ -1,0 +1,13 @@
+
+<h1>Walks</h1>
+
+<ng-container *ngIf="walks">
+  <mat-selection-list [multiple]="false">
+    <mat-list-option class="option" *ngFor="let walk of walks">
+      {{ walk.walker!.name }} walking {{ walk.dog!.name }}  on {{walk.from.getMonth()}}.{{walk.from.getDay()}}. {{ dayOfWeek(walk.from.getDay()).charAt(0).toUpperCase() + dayOfWeek(walk.from.getDay()).slice(1) + "
+       from " + walk.from.getHours()
+      + ":" + walk.from.getMinutes() + (walk.from.getMinutes()==0?"0":"") + " to " + walk.to.getHours()
+      + ":" + walk.to.getMinutes() + (walk.to.getMinutes()==0?"0":"") }}
+    </mat-list-option>
+  </mat-selection-list>
+</ng-container>
